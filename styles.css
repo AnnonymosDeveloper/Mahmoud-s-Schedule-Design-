@@ -1,0 +1,205 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px; /* Optional: Set a max-width for larger screens */
+}
+
+.first-two-days,
+.second-two-days,
+.third-two-days,
+.fourth-two-days {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  flex-shrink: 0; /* Prevent time column from shrinking */
+}
+
+.time {
+  border: 1px solid black;
+  background-color: #ddd;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-header {
+  background-color: #168c36;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunday-div,
+.monday-div,
+.tuesday-div,
+.wednesday-div,
+.thursday-div,
+.friday-div,
+.saturday-div {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow columns to shrink proportionally */
+  min-width: 0; /* Allow columns to shrink below their minimum width */
+}
+
+.sunday-header,
+.monday-header,
+.tuesday-header,
+.wednesday-header,
+.thursday-header,
+.friday-header,
+.saturday-header {
+  background-color: #168c36;
+  border: 1px solid black;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 40px; /* Fixed height to match time header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunday-cell,
+.monday-cell,
+.tuesday-cell,
+.wednesday-cell,
+.thursday-cell,
+.friday-cell,
+.saturday-cell {
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 40px; /* Fixed height to match time cells */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunday-cell:focus {
+  outline: 2px solid #168c36;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* For tablets and smaller screens */
+  .sunday-div,
+  .monday-div,
+  .tuesday-div,
+  .wednesday-div,
+  .thursday-div,
+  .friday-div,
+  .saturday-div {
+    min-width: 120px; /* Reduce width for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile screens */
+  .sunday-div,
+  .monday-div,
+  .tuesday-div,
+  .wednesday-div,
+  .thursday-div,
+  .friday-div,
+  .saturday-div {
+    min-width: 100px; /* Reduce width for smaller screens */
+  }
+
+  .time {
+    font-size: 12px; /* Reduce font size for time column */
+  }
+
+  .sunday-header,
+  .monday-header,
+  .tuesday-header,
+  .wednesday-header,
+  .thursday-header,
+  .friday-header,
+  .saturday-header {
+    font-size: 14px; /* Reduce font size for headers */
+  }
+
+  .sunday-cell,
+  .monday-cell,
+  .tuesday-cell,
+  .wednesday-cell,
+  .thursday-cell,
+  .friday-cell,
+  .saturday-cell {
+    font-size: 12px; /* Reduce font size for cells */
+  }
+}
+
+@media (max-width: 200px) {
+  /* For very small screens */
+  .sunday-div,
+  .monday-div,
+  .tuesday-div,
+  .wednesday-div,
+  .thursday-div,
+  .friday-div,
+  .saturday-div {
+    min-width: 80px; /* Further reduce width for very small screens */
+  }
+
+  .time {
+    font-size: 10px; /* Further reduce font size for time column */
+  }
+
+  .sunday-header,
+  .monday-header,
+  .tuesday-header,
+  .wednesday-header,
+  .thursday-header,
+  .friday-header,
+  .saturday-header {
+    font-size: 12px; /* Further reduce font size for headers */
+  }
+
+  .sunday-cell,
+  .monday-cell,
+  .tuesday-cell,
+  .wednesday-cell,
+  .thursday-cell,
+  .friday-cell,
+  .saturday-cell {
+    font-size: 10px; /* Further reduce font size for cells */
+  }
+}
